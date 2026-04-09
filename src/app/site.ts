@@ -138,6 +138,19 @@ export const hobbies: Hobby[] = [
     tag: "Off-hours reset",
     description:
       "Pool is a good reset for me. it&apos;s focused, competitive, and a lot more about rhythm than people think.",
-    placeholder: "Pool hall photo slot",
+    gallery: [
+      {
+        src: "/images/pool/pool-shot-1.jpeg",
+        alt: "Liam lining up a shot at a pool hall",
+      },
+      {
+        src: "/images/pool/pool-shot-2.jpeg",
+        alt: "Pool table set up in a bright lounge space",
+      },
+      {
+        src: "/images/pool/pool-shot-3.jpeg",
+        alt: "Pool table in a bar with players lining up shots",
+      },
+    ],
   },
 ];
