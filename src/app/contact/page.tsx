@@ -11,7 +11,7 @@ export default function ContactPage() {
             <p className={styles.kicker}>contact</p>
             <h1>say hello.</h1>
             <p className={styles.summary}>
-              email is the best way to reach me.
+              email is still the easiest way to reach me.
             </p>
             <div className={styles.inlineLinks}>
               <a className={styles.primary} href="mailto:liamvanpj@gmail.com">

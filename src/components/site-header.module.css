@@ -9,21 +9,24 @@
 .markWrap {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
 
-.markDot {
-  width: 11px;
-  height: 11px;
-  border-radius: 999px;
-  background: var(--ink);
+.markChevron {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid var(--ink);
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
-.markBar {
-  width: 24px;
-  height: 2px;
-  border-radius: 999px;
-  background: var(--ink);
+.markWrap:hover .markChevron:last-child {
+  transform: translateX(2px);
+}
+
+.markWrap:hover .markChevron:first-child {
+  opacity: 0.72;
 }
 
 .tabNav {

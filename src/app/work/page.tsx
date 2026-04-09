@@ -12,7 +12,7 @@ export default function WorkPage() {
             <p className={styles.kicker}>work</p>
             <h1>work.</h1>
             <p className={styles.summary}>
-              a short list of the work i&apos;ve spent the most time on.
+              a few of the things i&apos;ve spent the most time building.
             </p>
           </div>
         </section>

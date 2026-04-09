@@ -13,7 +13,7 @@ export default function HobbiesPage() {
             <p className={styles.kicker}>hobbies</p>
             <h1>hobbies.</h1>
             <p className={styles.summary}>
-              photography, college football, and pool.
+              stuff i like outside of work.
             </p>
           </div>
         </section>

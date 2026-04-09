@@ -17,33 +17,33 @@ export const work = [
     eyebrow: "Now",
     title: "Oracle · GCP Integration (Oasis)",
     body:
-      "Liam works on bringing OCI database services onto GCP, validating create, restore, backup, and Data Guard flows across APIs, console experiences, and CLI tooling.",
+      "I work on bringing OCI database services onto GCP, making sure create, restore, backup, and Data Guard flows work across the API, console, and CLI.",
     points: [
-      "Partners with Oracle and Google Cloud teams to surface blockers and align production fixes.",
-      "Owns AI-assisted testing, reusable tooling, and operational validation across customer-facing database workflows.",
-      "Supports releases on-call and investigates live issues with Grafana and T2 telemetry.",
+      "Work with Oracle and Google Cloud teams to unblock issues and line up production fixes.",
+      "Build AI-assisted testing and internal tools for customer-facing database workflows.",
+      "Help with releases, on-call support, and production debugging with Grafana and T2 telemetry.",
     ],
   },
   {
     eyebrow: "Built",
     title: "Oracle University · LLM Search and Recommendations",
     body:
-      "During his Oracle internship, Liam built product-facing AI features that made learning content easier to discover and more tailored to each user.",
+      "During my Oracle internship, I built AI features that made learning content easier to find and more useful for each person using it.",
     points: [
       "Built an LLM-powered recommendation experience for OCI learning content.",
-      "Integrated OpenSearch-based video retrieval into Oracle University's search experience.",
-      "Shipped React and NestJS product features from design feedback through implementation.",
+      "Added OpenSearch-based video retrieval to Oracle University search.",
+      "Shipped React and NestJS product features from design feedback through launch.",
     ],
   },
   {
     eyebrow: "Earlier",
     title: "Caterpillar · Backend and Data Systems",
     body:
-      "Before Oracle, Liam focused on backend APIs, data processing, and platform reliability in enterprise environments where performance and correctness mattered.",
+      "Before Oracle, I worked on backend APIs, data pipelines, and platform reliability in enterprise systems where performance and correctness mattered.",
     points: [
-      "Converted JSON workflows to Apache Parquet for a 30% storage-efficiency improvement.",
+      "Converted JSON workflows to Apache Parquet and improved storage efficiency by 30%.",
       "Built APIs and data flows that improved analysis speed by 50%.",
-      "Delivered distributed caching and CI/CD improvements across Spring Boot and Angular services.",
+      "Improved distributed caching and CI/CD across Spring Boot and Angular services.",
     ],
   },
 ];
@@ -53,7 +53,7 @@ export const projects = [
     title: "Fantasy Wizard",
     tag: "Product + AI",
     description:
-      "A fantasy football app built with React and Spring Boot, shaped around live league context and decision support.",
+      "A fantasy football app built with React and Spring Boot for lineup, trade, and draft decisions.",
     imageLabel: "Project screenshot placeholder",
     points: [
       "React frontend with Spring Boot backend",
@@ -65,7 +65,7 @@ export const projects = [
     title: "Oracle Learning Search",
     tag: "Search + Recommendations",
     description:
-      "A product-facing search and recommendation experience that made Oracle learning content easier to find and navigate.",
+      "A search and recommendation experience that made Oracle learning content easier to find and browse.",
     imageLabel: "Product UI placeholder",
     points: [
       "LLM-powered recommendations for learning content",
@@ -93,7 +93,7 @@ export const hobbies: Hobby[] = [
     title: "Photography",
     tag: "Visual diary",
     description:
-      "Photography is where Liam slows down and pays closer attention to framing, light, scale, and atmosphere.",
+      "Photography is probably my favorite way to slow down and pay attention to light, framing, and little details.",
     gallery: [
       {
         src: "/images/photography/snow-ridge-2.jpeg",
@@ -117,7 +117,7 @@ export const hobbies: Hobby[] = [
     title: "College football",
     tag: "UGA Saturdays",
     description:
-      "College football is part competition, part ritual, part excuse to gather with friends. Georgia is always in the mix.",
+      "College football is part sport, part routine, and part excuse to be around friends. most of that energy goes to uga.",
     imageSrc: "/images/football-photo.jpeg",
     imageAlt: "Liam with friends at a college football game",
   },
@@ -125,7 +125,7 @@ export const hobbies: Hobby[] = [
     title: "Playing pool",
     tag: "Off-hours reset",
     description:
-      "Pool is focused, social, and quietly competitive. Less flash, more rhythm and angles.",
+      "Pool is a good reset for me. it&apos;s focused, competitive, and a lot more about rhythm than people think.",
     placeholder: "Pool hall photo slot",
   },
 ];

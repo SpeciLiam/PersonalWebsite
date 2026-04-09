@@ -12,14 +12,16 @@ export default function Home() {
           <div className={styles.heroGrid}>
             <div className={styles.heroCopy}>
               <p className={styles.kicker}>hi, i&apos;m liam van.</p>
-              <h1>i&apos;m a software engineer working on cloud and ai systems.</h1>
+              <h1>i build backend systems, ai features, and products people actually use.</h1>
               <p className={styles.summary}>
-                i work on oracle&apos;s gcp integration team. most of my work is
-                backend systems, release readiness, and production issues.
+                i&apos;m a software engineer at oracle, where i work on oci database
+                workflows running on google cloud.
               </p>
               <p className={styles.summary}>
-                i&apos;ve also built ai features, search experiences, and full-stack
-                products with react, nestjs, spring boot, and java.
+                most days that means backend work, release testing, and digging
+                through production issues. i&apos;ve also built ai features, search
+                tools, and full-stack products with react, nestjs, spring boot,
+                and java.
               </p>
               <div className={styles.inlineLinks}>
                 <a className={styles.primary} href="mailto:liamvanpj@gmail.com">
@@ -69,7 +71,7 @@ export default function Home() {
                 <p className={styles.cardLabel}>now</p>
                 <h2>oracle x google cloud</h2>
                 <p>
-                  building and validating oci database workflows on gcp.
+                  building and testing oci database workflows on gcp.
                 </p>
               </div>
             </div>
@@ -80,7 +82,7 @@ export default function Home() {
           <div className={styles.linkGrid}>
             <a className={styles.linkCard} href={withBasePath("/work")}>
               <p className={styles.sectionEyebrow}>work</p>
-              <h2>experience and projects.</h2>
+              <h2>what i&apos;ve worked on.</h2>
             </a>
             <a className={styles.linkCard} href={withBasePath("/hobbies")}>
               <p className={styles.sectionEyebrow}>hobbies</p>
@@ -88,7 +90,7 @@ export default function Home() {
             </a>
             <a className={styles.linkCard} href={withBasePath("/contact")}>
               <p className={styles.sectionEyebrow}>contact</p>
-              <h2>email, github, and linkedin.</h2>
+              <h2>ways to reach me.</h2>
             </a>
           </div>
         </section>
