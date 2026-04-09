@@ -11,9 +11,9 @@ export default function HobbiesPage() {
           <SiteHeader currentPath="/hobbies" />
           <div className={styles.heroCopy}>
             <p className={styles.kicker}>hobbies</p>
-            <h1>photography, college football, and pool.</h1>
+            <h1>hobbies.</h1>
             <p className={styles.summary}>
-              a few things i spend time on away from work.
+              photography, college football, and pool.
             </p>
           </div>
         </section>

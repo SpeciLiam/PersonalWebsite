@@ -10,10 +10,9 @@ export default function WorkPage() {
           <SiteHeader currentPath="/work" />
           <div className={styles.heroCopy}>
             <p className={styles.kicker}>work</p>
-            <h1>recent work.</h1>
+            <h1>work.</h1>
             <p className={styles.summary}>
-              a short selection of systems and product work i&apos;ve spent the
-              most time on recently.
+              a short list of the work i&apos;ve spent the most time on.
             </p>
           </div>
         </section>

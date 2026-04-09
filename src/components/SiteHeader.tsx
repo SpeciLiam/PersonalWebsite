@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { tabs } from "@/app/site";
+import { tabs, withBasePath } from "@/app/site";
 import styles from "./site-header.module.css";
 
 export function SiteHeader({ currentPath }: { currentPath: string }) {
@@ -11,15 +10,15 @@ export function SiteHeader({ currentPath }: { currentPath: string }) {
       </div>
       <nav className={styles.tabNav} aria-label="Section navigation">
         {tabs.map((tab) => (
-          <Link
+          <a
             key={tab.href}
-            href={tab.href}
+            href={withBasePath(tab.href)}
             className={`${styles.tabLink} ${
               currentPath === tab.href ? styles.active : ""
             }`}
           >
             {tab.label}
-          </Link>
+          </a>
         ))}
       </nav>
     </div>

@@ -1,6 +1,9 @@
 export const assetBase = process.env.GITHUB_ACTIONS === "true" ? "." : "";
+const repoBase = process.env.GITHUB_ACTIONS === "true" ? "/PersonalWebsite" : "";
 
 export const withAssetBase = (path: string) => `${assetBase}${path}`;
+export const withBasePath = (path: string) =>
+  path === "/" ? `${repoBase}/` : `${repoBase}${path}/`;
 
 export const tabs = [
   { label: "home", href: "/" },
