@@ -56,7 +56,7 @@ export default function HobbiesPage() {
                       ))}
                     </div>
                   ) : hobby.imageSrc ? (
-                    <div className={styles.photoFrame}>
+                    <div className={styles.detailFrame}>
                       <div className={styles.imageBadge}>{hobby.tag}</div>
                       <Image
                         src={withAssetBase(hobby.imageSrc)}

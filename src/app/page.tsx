@@ -31,25 +31,27 @@ export default function Home() {
               <SocialLinks />
             </div>
             <div className={styles.heroRail}>
-              <div className={styles.heroPortrait}>
-                <div className={styles.photoFrame}>
+              <div className={styles.heroPhotoGrid}>
+                <div className={styles.heroPhotoCard}>
+                  <div className={styles.heroPhotoLabel}>me</div>
                   <Image
                     src={withAssetBase("/images/hero-portrait.jpeg")}
                     alt="Portrait of Liam outdoors"
-                    fill
-                    className={styles.coverImage}
+                    width={1179}
+                    height={1570}
+                    className={styles.detailImage}
                     priority
                   />
                 </div>
-                <div className={styles.polaroidAccent}>
-                  <div className={styles.polaroidInner}>
-                    <Image
-                      src={withAssetBase("/images/polaroid-friends.jpeg")}
-                      alt="Polaroid photo of Liam with friends"
-                      fill
-                      className={styles.coverImage}
-                    />
-                  </div>
+                <div className={styles.heroPhotoCard}>
+                  <div className={styles.heroPhotoLabel}>friends</div>
+                  <Image
+                    src={withAssetBase("/images/polaroid-friends.jpeg")}
+                    alt="Photo of Liam with friends"
+                    width={768}
+                    height={1024}
+                    className={styles.detailImage}
+                  />
                 </div>
               </div>
               <div className={styles.heroCard}>

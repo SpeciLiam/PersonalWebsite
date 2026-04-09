@@ -94,17 +94,22 @@
   gap: 18px;
 }
 
-.heroPortrait {
-  position: relative;
+.heroPhotoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
 }
 
-.photoFrame {
+.heroPhotoCard,
+.detailFrame {
   position: relative;
+  overflow: hidden;
   background: #ece8df;
+  border: 1px solid rgba(19, 34, 41, 0.08);
 }
 
-.coverImage {
-  object-fit: cover;
+.heroPhotoCard {
+  align-self: start;
 }
 
 .detailImage,
@@ -114,24 +119,18 @@
   height: auto;
 }
 
-.polaroidAccent {
+.heroPhotoLabel {
   position: absolute;
-  right: -14px;
-  bottom: 12px;
-  width: 110px;
-  height: 136px;
-  padding: 8px 8px 22px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  transform: rotate(4deg);
-}
-
-.polaroidInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #ddd;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 252, 247, 0.88);
+  color: #4f4f4f;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
 }
 
 .heroCard h2 {
@@ -215,22 +214,22 @@
 }
 
 .photoGallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  column-count: 2;
+  column-gap: 10px;
 }
 
 .photoGalleryGrid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-count: 3;
 }
 
 .galleryShot {
-  position: relative;
+  break-inside: avoid;
+  margin-bottom: 10px;
   background: #ece8df;
 }
 
 .galleryShotLarge {
-  grid-column: 1 / -1;
+  margin-bottom: 10px;
 }
 
 .hobbyContent h3,
@@ -254,12 +253,13 @@
   }
 
   .heroGrid,
-  .photoGallery {
+  .heroPhotoGrid {
     grid-template-columns: 1fr;
   }
 
+  .photoGallery,
   .photoGalleryGrid {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
 
   .heroCopy h1 {
@@ -283,8 +283,4 @@
     min-height: 0;
   }
 
-  .polaroidAccent {
-    right: 8px;
-    bottom: 8px;
-  }
 }
