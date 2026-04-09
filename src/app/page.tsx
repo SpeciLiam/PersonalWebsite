@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+const assetBase = process.env.GITHUB_ACTIONS === "true" ? "." : "";
+
 type Hobby = {
   title: string;
   tag: string;
@@ -13,6 +15,8 @@ type Hobby = {
     alt: string;
   }>;
 };
+
+const withAssetBase = (path: string) => `${assetBase}${path}`;
 
 const highlights = [
   {
@@ -177,7 +181,7 @@ export default function Home() {
                 <div className={styles.photoFrame}>
                   <div className={styles.imageBadge}>Portrait</div>
                   <Image
-                    src="/images/hero-portrait.jpeg"
+                    src={withAssetBase("/images/hero-portrait.jpeg")}
                     alt="Portrait of Liam outdoors"
                     fill
                     className={styles.coverImage}
@@ -187,7 +191,7 @@ export default function Home() {
                 <div className={styles.polaroidAccent}>
                   <div className={styles.polaroidInner}>
                     <Image
-                      src="/images/polaroid-friends.jpeg"
+                      src={withAssetBase("/images/polaroid-friends.jpeg")}
                       alt="Polaroid photo of Liam with friends"
                       fill
                       className={styles.coverImage}
@@ -254,7 +258,7 @@ export default function Home() {
               <div className={styles.photoFrame}>
                 <div className={styles.imageBadge}>Travel moment</div>
                 <Image
-                  src="/images/japan-gates.jpeg"
+                  src={withAssetBase("/images/japan-gates.jpeg")}
                   alt="Liam standing beneath orange gates in Japan"
                   fill
                   className={styles.coverImage}
@@ -276,7 +280,7 @@ export default function Home() {
                           }`}
                         >
                           <Image
-                            src={shot.src}
+                            src={withAssetBase(shot.src)}
                             alt={shot.alt}
                             fill
                             className={styles.coverImage}
@@ -288,7 +292,7 @@ export default function Home() {
                     <div className={styles.photoFrame}>
                       <div className={styles.imageBadge}>{hobby.tag}</div>
                       <Image
-                        src={hobby.imageSrc}
+                        src={withAssetBase(hobby.imageSrc)}
                         alt={hobby.imageAlt ?? hobby.title}
                         fill
                         className={styles.coverImage}
