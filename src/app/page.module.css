@@ -37,18 +37,62 @@
   padding: 28px;
 }
 
-.navRow {
+.topBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 40px;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+  margin-bottom: 30px;
+  gap: 16px;
+}
+
+.markWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.markDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+.markBar {
+  width: 24px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+.tabNav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.tabLink {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  text-transform: lowercase;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.tabLink:hover {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
 }
 
 .kicker,
-.location,
 .eyebrow,
 .sectionEyebrow,
 .timelineEyebrow,
@@ -79,11 +123,12 @@
 }
 
 .heroCopy h1 {
-  max-width: 11ch;
-  margin: 14px 0 18px;
-  font-size: clamp(3.8rem, 9vw, 7.4rem);
+  max-width: 10ch;
+  margin: 10px 0 16px;
+  font-size: clamp(3rem, 7vw, 5.4rem);
 }
 
+.kicker,
 .eyebrow,
 .sectionEyebrow,
 .timelineEyebrow,
@@ -95,10 +140,14 @@
 }
 
 .summary {
-  max-width: 60ch;
+  max-width: 58ch;
   color: var(--ink-soft);
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.summary + .summary {
+  margin-top: 12px;
 }
 
 .heroCard,
@@ -204,7 +253,7 @@
 
 .heroCard h2 {
   margin: 10px 0 12px;
-  font-size: 1.65rem;
+  font-size: 1.4rem;
 }
 
 .heroCard p {
@@ -511,14 +560,19 @@
   }
 
   .navRow {
+  .topBar {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
     margin-bottom: 24px;
   }
 
+  .tabNav {
+    justify-content: flex-start;
+  }
+
   .heroCopy h1 {
-    font-size: clamp(2.9rem, 18vw, 4.6rem);
+    font-size: clamp(2.6rem, 14vw, 4rem);
   }
 
   .sectionHeader h2,

@@ -149,31 +149,49 @@ const hobbies: Hobby[] = [
   },
 ];
 
+const tabs = [
+  { label: "intro", href: "#intro" },
+  { label: "work", href: "#work" },
+  { label: "photos", href: "#photos" },
+  { label: "contact", href: "#contact" },
+];
+
 export default function Home() {
   return (
     <div className={styles.page}>
       <div className={styles.backdrop} />
       <main className={styles.main}>
-        <section className={styles.hero}>
-          <div className={styles.navRow}>
-            <p className={styles.kicker}>Liam Van</p>
-            <p className={styles.location}>Seattle, WA</p>
+        <section className={styles.hero} id="intro">
+          <div className={styles.topBar}>
+            <div className={styles.markWrap} aria-label="Liam Van mark">
+              <span className={styles.markDot} />
+              <span className={styles.markBar} />
+            </div>
+            <nav className={styles.tabNav} aria-label="Section navigation">
+              {tabs.map((tab) => (
+                <a key={tab.href} href={tab.href} className={styles.tabLink}>
+                  {tab.label}
+                </a>
+              ))}
+            </nav>
           </div>
           <div className={styles.heroGrid}>
             <div className={styles.heroCopy}>
-              <p className={styles.eyebrow}>
-                Cloud systems, AI-assisted tooling, and product-minded engineering
-              </p>
+              <p className={styles.kicker}>hi, i&apos;m liam van.</p>
               <h1>
-                Liam builds software that can survive production pressure and
-                still feel useful to real people.
+                Cloud, AI, and full-stack engineering with a practical,
+                product-minded bent.
               </h1>
               <p className={styles.summary}>
-                He is a software engineer currently working on Oracle&apos;s GCP
-                Integration team, where backend workflows, cross-team execution,
-                and release readiness all matter at once. His work spans cloud
-                systems, AI experiences, search, reliability, and full-stack
-                delivery.
+                Liam is a software engineer on Oracle&apos;s GCP Integration
+                team, where he works on backend workflows, release readiness,
+                AI-assisted tooling, and production issues across OCI database
+                services running on Google Cloud.
+              </p>
+              <p className={styles.summary}>
+                He has also built LLM-powered product features, search and
+                recommendation systems, and full-stack experiences in React,
+                NestJS, Spring Boot, and Java-backed services.
               </p>
             </div>
             <div className={styles.heroRail}>
@@ -200,7 +218,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.heroCard}>
-                <p className={styles.cardLabel}>Current focus</p>
+                <p className={styles.cardLabel}>Now</p>
                 <h2>Oracle x Google Cloud</h2>
                 <p>
                   Building and validating OCI database workflows on GCP while
@@ -229,11 +247,11 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               LinkedIn
-            </a>{" "}
+            </a>
           </div>
         </section>
 
-        <section className={styles.section}>
+        <section className={styles.section} id="photos">
           <div className={styles.sectionHeader}>
             <p className={styles.sectionEyebrow}>Outside of work</p>
             <h2>
@@ -325,7 +343,7 @@ export default function Home() {
           ))}
         </section>
 
-        <section className={styles.section}>
+        <section className={styles.section} id="work">
           <div className={styles.sectionHeader}>
             <p className={styles.sectionEyebrow}>Why teams hire Liam</p>
             <h2>
@@ -420,7 +438,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.footerCard}>
+        <section className={styles.footerCard} id="contact">
           <p className={styles.sectionEyebrow}>Let&apos;s build something strong</p>
           <h2>Hiring, collaborating, or just curious about the work?</h2>
           <p>
