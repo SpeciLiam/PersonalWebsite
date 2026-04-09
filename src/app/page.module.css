@@ -152,6 +152,13 @@
   display: block;
 }
 
+.timelineCard {
+  padding: 22px 24px 24px;
+  border: 1px solid rgba(19, 34, 41, 0.1);
+  background: rgba(255, 252, 247, 0.72);
+  box-shadow: 0 18px 50px rgba(19, 34, 41, 0.05);
+}
+
 .linkCard h2 {
   margin-top: 6px;
   font-size: clamp(1.8rem, 4vw, 2.4rem);

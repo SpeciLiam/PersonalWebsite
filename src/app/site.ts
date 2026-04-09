@@ -11,9 +11,20 @@ export const tabs = [
   { label: "contact", href: "/contact" },
 ];
 
-export const work = [
+export type WorkBrand = "oracle" | "googleCloud" | "caterpillar";
+
+export type WorkItem = {
+  eyebrow: string;
+  brands: WorkBrand[];
+  title: string;
+  body: string;
+  points: string[];
+};
+
+export const work: WorkItem[] = [
   {
     eyebrow: "Now",
+    brands: ["oracle", "googleCloud"],
     title: "Oracle · GCP Integration (Oasis)",
     body:
       "I work on bringing OCI database services onto GCP, making sure create, restore, backup, and Data Guard flows work across the API, console, and CLI.",
@@ -25,6 +36,7 @@ export const work = [
   },
   {
     eyebrow: "Built",
+    brands: ["oracle"],
     title: "Oracle University · LLM Search and Recommendations",
     body:
       "During my Oracle internship, I built AI features that made learning content easier to find and more useful for each person using it.",
@@ -36,6 +48,7 @@ export const work = [
   },
   {
     eyebrow: "Earlier",
+    brands: ["caterpillar"],
     title: "Caterpillar · Backend and Data Systems",
     body:
       "Before Oracle, I worked on backend APIs, data pipelines, and platform reliability in enterprise systems where performance and correctness mattered.",

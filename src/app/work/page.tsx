@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/SiteHeader";
+import { CompanyMarks } from "@/components/CompanyMarks";
 import { projects, work } from "../site";
 import styles from "../page.module.css";
 
@@ -22,6 +23,7 @@ export default function WorkPage() {
             {work.map((item) => (
               <article key={item.title} className={styles.timelineCard}>
                 <p className={styles.timelineEyebrow}>{item.eyebrow}</p>
+                <CompanyMarks brands={item.brands} />
                 <h3>{item.title}</h3>
                 <p className={styles.timelineBody}>{item.body}</p>
                 <ul className={styles.pointList}>
