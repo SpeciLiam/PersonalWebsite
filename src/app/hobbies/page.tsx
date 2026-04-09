@@ -41,9 +41,16 @@ export default function HobbiesPage() {
                           <Image
                             src={withAssetBase(shot.src)}
                             alt={shot.alt}
-                            fill
-                            className={styles.coverImage}
-                            style={{ objectPosition: shot.position ?? "center" }}
+                            width={shot.width}
+                            height={shot.height}
+                            className={styles.galleryImage}
+                            sizes={
+                              hobby.galleryLayout === "grid"
+                                ? "(max-width: 720px) 100vw, 32vw"
+                                : index === 0
+                                  ? "(max-width: 720px) 100vw, 100vw"
+                                  : "(max-width: 720px) 100vw, 49vw"
+                            }
                           />
                         </div>
                       ))}
@@ -54,9 +61,10 @@ export default function HobbiesPage() {
                       <Image
                         src={withAssetBase(hobby.imageSrc)}
                         alt={hobby.imageAlt ?? hobby.title}
-                        fill
-                        className={styles.coverImage}
-                        style={{ objectPosition: hobby.imagePosition ?? "center" }}
+                        width={hobby.imageWidth ?? 768}
+                        height={hobby.imageHeight ?? 1024}
+                        className={styles.detailImage}
+                        sizes="(max-width: 720px) 100vw, 980px"
                       />
                     </div>
                   ) : (

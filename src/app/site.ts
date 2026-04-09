@@ -94,12 +94,14 @@ export type Hobby = {
   placeholder?: string;
   imageSrc?: string;
   imageAlt?: string;
-  imagePosition?: string;
   galleryLayout?: "feature" | "grid";
+  imageWidth?: number;
+  imageHeight?: number;
   gallery?: Array<{
     src: string;
     alt: string;
-    position?: string;
+    width: number;
+    height: number;
   }>;
 };
 
@@ -114,18 +116,26 @@ export const hobbies: Hobby[] = [
       {
         src: "/images/photography/snow-ridge-2.jpeg",
         alt: "Snow-covered mountain range panorama",
+        width: 2172,
+        height: 1448,
       },
       {
         src: "/images/photography/mountain-reflection.jpeg",
         alt: "Mountain framed behind a reflecting pool and cherry blossoms",
+        width: 1086,
+        height: 724,
       },
       {
         src: "/images/photography/times-square-snow.jpeg",
         alt: "Snowy city street with Times Square signage",
+        width: 1448,
+        height: 2172,
       },
       {
         src: "/images/photography/city-street-blue.jpeg",
         alt: "Blue-hour city street scene with buildings and traffic",
+        width: 724,
+        height: 1086,
       },
     ],
   },
@@ -136,7 +146,8 @@ export const hobbies: Hobby[] = [
       "College football is part sport, part routine, and part excuse to be around friends. most of that energy goes to uga.",
     imageSrc: "/images/football-photo.jpeg",
     imageAlt: "Liam with friends at a college football game",
-    imagePosition: "center 28%",
+    imageWidth: 768,
+    imageHeight: 1024,
   },
   {
     title: "Playing pool",
@@ -148,17 +159,20 @@ export const hobbies: Hobby[] = [
       {
         src: "/images/pool/pool-shot-1.jpeg",
         alt: "Liam lining up a shot at a pool hall",
-        position: "center center",
+        width: 1536,
+        height: 2048,
       },
       {
         src: "/images/pool/pool-shot-2.jpeg",
         alt: "Pool table set up in a bright lounge space",
-        position: "center center",
+        width: 1536,
+        height: 2048,
       },
       {
         src: "/images/pool/pool-shot-3.jpeg",
         alt: "Pool table in a bar with players lining up shots",
-        position: "center center",
+        width: 1536,
+        height: 2048,
       },
     ],
   },

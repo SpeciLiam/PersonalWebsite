@@ -100,13 +100,18 @@
 
 .photoFrame {
   position: relative;
-  overflow: hidden;
-  min-height: 400px;
   background: #ece8df;
 }
 
 .coverImage {
   object-fit: cover;
+}
+
+.detailImage,
+.galleryImage {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .polaroidAccent {
@@ -221,14 +226,11 @@
 
 .galleryShot {
   position: relative;
-  min-height: 150px;
-  overflow: hidden;
   background: #ece8df;
 }
 
 .galleryShotLarge {
   grid-column: 1 / -1;
-  min-height: 220px;
 }
 
 .hobbyContent h3,
@@ -278,7 +280,7 @@
   .galleryShot,
   .photoFrame,
   .imageShell {
-    min-height: 220px;
+    min-height: 0;
   }
 
   .polaroidAccent {
