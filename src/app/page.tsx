@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SocialLinks } from "@/components/SocialLinks";
 import { withAssetBase, withBasePath } from "./site";
 import styles from "./page.module.css";
 
@@ -11,8 +12,12 @@ export default function Home() {
           <SiteHeader currentPath="/" />
           <div className={styles.heroGrid}>
             <div className={styles.heroCopy}>
-              <p className={styles.kicker}>hi, i&apos;m liam van.</p>
-              <h1>i build backend systems, ai features, and products people actually use.</h1>
+              <p className={styles.introLead}>hi, i&apos;m</p>
+              <h1 className={styles.introName}>liam van.</h1>
+              <p className={styles.heroIntro}>
+                i build backend systems, ai features, and products people
+                actually use.
+              </p>
               <p className={styles.summary}>
                 i&apos;m a software engineer at oracle, where i work on oci database
                 workflows running on google cloud.
@@ -23,27 +28,7 @@ export default function Home() {
                 tools, and full-stack products with react, nestjs, spring boot,
                 and java.
               </p>
-              <div className={styles.inlineLinks}>
-                <a className={styles.primary} href="mailto:liamvanpj@gmail.com">
-                  email
-                </a>
-                <a
-                  className={styles.secondary}
-                  href="https://github.com/SpeciLiam"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  github
-                </a>
-                <a
-                  className={styles.secondary}
-                  href="https://www.linkedin.com/in/liam-van"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  linkedin
-                </a>
-              </div>
+              <SocialLinks />
             </div>
             <div className={styles.heroRail}>
               <div className={styles.heroPortrait}>

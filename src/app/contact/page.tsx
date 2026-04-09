@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/SiteHeader";
+import { SocialLinks } from "@/components/SocialLinks";
 import styles from "../page.module.css";
 
 export default function ContactPage() {
@@ -13,27 +14,7 @@ export default function ContactPage() {
             <p className={styles.summary}>
               email is still the easiest way to reach me.
             </p>
-            <div className={styles.inlineLinks}>
-              <a className={styles.primary} href="mailto:liamvanpj@gmail.com">
-                email
-              </a>
-              <a
-                className={styles.secondary}
-                href="https://github.com/SpeciLiam"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                github
-              </a>
-              <a
-                className={styles.secondary}
-                href="https://www.linkedin.com/in/liam-van"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                linkedin
-              </a>
-            </div>
+            <SocialLinks />
           </div>
         </section>
       </main>

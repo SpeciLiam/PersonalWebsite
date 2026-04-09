@@ -5,9 +5,9 @@
 }
 
 .main {
-  width: min(760px, calc(100vw - 32px));
+  width: min(980px, calc(100vw - 48px));
   margin: 0 auto;
-  padding: 28px 0 64px;
+  padding: 28px 0 80px;
 }
 
 .hero,
@@ -17,8 +17,8 @@
 
 .heroGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) 240px;
-  gap: 28px;
+  grid-template-columns: minmax(0, 1.35fr) 300px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -32,9 +32,33 @@
 }
 
 .heroCopy h1 {
-  max-width: 10ch;
+  max-width: 11ch;
   margin: 8px 0 14px;
   font-size: clamp(2.8rem, 8vw, 4.5rem);
+}
+
+.introLead {
+  color: #5b5b5b;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+}
+
+.introName {
+  max-width: none;
+  margin: 2px 0 10px;
+  font-size: clamp(4rem, 11vw, 7rem);
+  line-height: 0.9;
+}
+
+.heroIntro {
+  max-width: 18ch;
+  color: #23343b;
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
 }
 
 .kicker,
@@ -61,25 +85,13 @@
   margin-top: 12px;
 }
 
-.inlineLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+.heroIntro + .summary {
   margin-top: 18px;
-}
-
-.primary,
-.secondary {
-  color: #151515;
-  font-size: 0.96rem;
-  text-transform: lowercase;
-  text-decoration: underline;
-  text-underline-offset: 0.16em;
 }
 
 .heroRail {
   display: grid;
-  gap: 14px;
+  gap: 18px;
 }
 
 .heroPortrait {
@@ -89,7 +101,7 @@
 .photoFrame {
   position: relative;
   overflow: hidden;
-  min-height: 320px;
+  min-height: 400px;
   background: #ece8df;
 }
 
@@ -130,7 +142,7 @@
 .projectGrid,
 .hobbyGrid {
   display: grid;
-  gap: 24px;
+  gap: 32px;
 }
 
 .linkCard,
@@ -145,9 +157,7 @@
   font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
 
-.linkCard:hover h2,
-.primary:hover,
-.secondary:hover {
+.linkCard:hover h2 {
   opacity: 0.7;
 }
 
@@ -226,7 +236,7 @@
 
 @media (max-width: 720px) {
   .main {
-    width: min(100vw - 24px, 760px);
+    width: min(100vw - 24px, 980px);
     padding: 20px 0 44px;
   }
 
@@ -238,6 +248,15 @@
   .heroCopy h1 {
     max-width: none;
     font-size: clamp(2.4rem, 12vw, 3.6rem);
+  }
+
+  .introName {
+    font-size: clamp(3.4rem, 18vw, 5rem);
+  }
+
+  .heroIntro {
+    max-width: none;
+    font-size: clamp(1.45rem, 7vw, 2rem);
   }
 
   .galleryShotLarge,
