@@ -1,134 +1,96 @@
 .page {
-  position: relative;
   min-height: 100vh;
-}
-
-.backdrop {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(19, 34, 41, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(19, 34, 41, 0.04) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 85%);
+  background: #f8f5ee;
+  color: #151515;
 }
 
 .main {
-  position: relative;
-  width: min(1120px, calc(100vw - 32px));
+  width: min(760px, calc(100vw - 32px));
   margin: 0 auto;
-  padding: 32px 0 80px;
+  padding: 28px 0 64px;
 }
 
 .hero,
-.section,
-.footerCard {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 32px;
-  background: var(--card);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
-}
-
-.hero {
-  padding: 28px;
-}
-
-.kicker,
-.eyebrow,
-.sectionEyebrow,
-.timelineEyebrow,
-.cardLabel {
-  color: var(--ocean);
+.section {
+  margin-bottom: 40px;
 }
 
 .heroGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.95fr);
-  gap: 24px;
-  align-items: end;
-}
-
-.heroRail {
-  display: grid;
-  gap: 16px;
+  grid-template-columns: minmax(0, 1.2fr) 240px;
+  gap: 28px;
+  align-items: start;
 }
 
 .heroCopy h1,
 .sectionHeader h2,
-.footerCard h2 {
+.linkCard h2 {
   font-family: var(--font-cormorant), serif;
   font-weight: 600;
   line-height: 0.95;
   letter-spacing: -0.04em;
-  text-wrap: balance;
 }
 
 .heroCopy h1 {
   max-width: 10ch;
-  margin: 10px 0 16px;
-  font-size: clamp(3rem, 7vw, 5.4rem);
+  margin: 8px 0 14px;
+  font-size: clamp(2.8rem, 8vw, 4.5rem);
 }
 
 .kicker,
-.eyebrow,
 .sectionEyebrow,
 .timelineEyebrow,
 .cardLabel {
-  font-size: 0.82rem;
+  color: #5b5b5b;
+  font-size: 0.78rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
 }
 
-.summary {
-  max-width: 58ch;
-  color: var(--ink-soft);
+.summary,
+.timelineBody,
+.heroCard p,
+.hobbyContent p {
+  color: #4f4f4f;
   font-size: 1rem;
-  line-height: 1.85;
+  line-height: 1.8;
 }
 
 .summary + .summary {
   margin-top: 12px;
 }
 
-.heroCard,
-.metricCard,
-.strengthCard,
-.timelineCard,
-.storyPanel,
-.projectCard {
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.58);
+.inlineLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.primary,
+.secondary {
+  color: #151515;
+  font-size: 0.96rem;
+  text-transform: lowercase;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.heroRail {
+  display: grid;
+  gap: 14px;
 }
 
 .heroPortrait {
-  border-radius: 28px;
   position: relative;
-  min-height: 360px;
-}
-
-.imageShell {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  background:
-    radial-gradient(circle at top right, rgba(217, 108, 50, 0.18), transparent 28%),
-    linear-gradient(160deg, rgba(15, 108, 116, 0.08), rgba(255, 255, 255, 0.82));
-  min-height: 300px;
 }
 
 .photoFrame {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  min-height: 300px;
-  background: rgba(255, 255, 255, 0.8);
+  min-height: 320px;
+  background: #ece8df;
 }
 
 .coverImage {
@@ -137,16 +99,14 @@
 
 .polaroidAccent {
   position: absolute;
-  right: -10px;
-  bottom: 18px;
-  width: 138px;
-  height: 168px;
-  padding: 10px 10px 28px;
-  border-radius: 10px;
-  background: #fffdfa;
-  border: 1px solid rgba(19, 34, 41, 0.1);
-  box-shadow: 0 18px 40px rgba(19, 34, 41, 0.18);
-  transform: rotate(5deg);
+  right: -14px;
+  bottom: 12px;
+  width: 110px;
+  height: 136px;
+  padding: 8px 8px 22px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: rotate(4deg);
 }
 
 .polaroidInner {
@@ -154,144 +114,82 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #e8e2d6;
+  background: #ddd;
+}
+
+.heroCard h2 {
+  margin: 6px 0;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.linkGrid,
+.timeline,
+.projectGrid,
+.hobbyGrid {
+  display: grid;
+  gap: 24px;
+}
+
+.linkCard,
+.timelineCard,
+.projectCard,
+.hobbyCard {
+  display: block;
+}
+
+.linkCard h2 {
+  margin-top: 6px;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.linkCard:hover h2,
+.primary:hover,
+.secondary:hover {
+  opacity: 0.7;
+}
+
+.pointList {
+  margin-top: 12px;
+  padding-left: 18px;
+}
+
+.pointList li {
+  margin-bottom: 8px;
+  color: #3f3f3f;
+  line-height: 1.7;
+}
+
+.projectImageWrap,
+.hobbyMedia {
+  margin-bottom: 12px;
+}
+
+.imageShell {
+  position: relative;
+  min-height: 220px;
+  background: #ece8df;
 }
 
 .imageBadge {
   position: absolute;
-  top: 14px;
-  left: 14px;
+  top: 10px;
+  left: 10px;
   z-index: 1;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 252, 247, 0.86);
-  border: 1px solid var(--line);
-  color: var(--ocean);
-  font-size: 0.76rem;
-  font-weight: 700;
+  color: #666;
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .imagePlaceholder {
   display: grid;
   place-items: center;
-  min-height: 300px;
-  padding: 28px;
-  color: var(--ink-soft);
+  min-height: 220px;
+  color: #6b6b6b;
   text-align: center;
-  line-height: 1.7;
-}
-
-.imagePlaceholder span {
-  max-width: 16ch;
-  font-size: 1rem;
-}
-
-.heroCard {
-  border-radius: 28px;
-  padding: 24px;
-  background:
-    linear-gradient(160deg, rgba(15, 108, 116, 0.1), rgba(255, 255, 255, 0.72)),
-    rgba(255, 255, 255, 0.7);
-}
-
-.heroCard h2 {
-  margin: 10px 0 12px;
-  font-size: 1.4rem;
-}
-
-.heroCard p {
-  color: var(--ink-soft);
-  line-height: 1.75;
-}
-
-.ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.primary,
-.secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0 20px;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  transition:
-    transform 180ms ease,
-    background-color 180ms ease,
-    border-color 180ms ease,
-    color 180ms ease;
-}
-
-.primary {
-  background: var(--accent);
-  color: #fff7f2;
-}
-
-.secondary {
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.62);
-}
-
-.primary:hover,
-.secondary:hover {
-  transform: translateY(-2px);
-}
-
-.primary:hover {
-  background: var(--accent-deep);
-}
-
-.secondary:hover {
-  border-color: rgba(19, 34, 41, 0.28);
-}
-
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin: 18px 0;
-}
-
-.hobbyLead {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.hobbyFeature .photoFrame {
-  min-height: 340px;
-}
-
-.hobbyGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.hobbyCard {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  background: rgba(255, 255, 255, 0.58);
-}
-
-.hobbyMedia {
-  padding: 16px 16px 0;
-}
-
-.hobbyMedia .photoFrame,
-.hobbyMedia .imageShell,
-.hobbyMedia .imagePlaceholder {
-  min-height: 240px;
 }
 
 .photoGallery {
@@ -302,272 +200,55 @@
 
 .galleryShot {
   position: relative;
-  overflow: hidden;
   min-height: 150px;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.74);
+  overflow: hidden;
+  background: #ece8df;
 }
 
 .galleryShotLarge {
   grid-column: 1 / -1;
-  min-height: 240px;
-}
-
-.hobbyContent {
-  padding: 18px 20px 22px;
-}
-
-.hobbyContent h3 {
-  margin-bottom: 10px;
-  font-size: 1.35rem;
-}
-
-.metricCard {
-  border-radius: 24px;
-  padding: 22px;
-}
-
-.metricValue {
-  margin-bottom: 10px;
-  font-family: var(--font-cormorant), serif;
-  font-size: clamp(2rem, 4vw, 2.7rem);
-  font-weight: 700;
-}
-
-.metricLabel {
-  color: var(--ink-soft);
-  line-height: 1.65;
-}
-
-.section {
-  padding: 28px;
-  margin-top: 18px;
-}
-
-.sectionHeader {
-  display: grid;
-  grid-template-columns: minmax(0, 0.38fr) minmax(0, 1fr);
-  gap: 18px;
-  margin-bottom: 28px;
-}
-
-.sectionHeader h2,
-.footerCard h2 {
-  font-size: clamp(2.2rem, 5vw, 4.4rem);
-}
-
-.strengthGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.strengthCard {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  border-radius: 24px;
-  padding: 20px;
-}
-
-.strengthMarker {
-  width: 12px;
-  height: 12px;
-  margin-top: 8px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), var(--ocean));
-  flex: 0 0 auto;
-}
-
-.strengthCard p {
-  color: var(--ink-soft);
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.timeline {
-  display: grid;
-  gap: 16px;
-}
-
-.timelineCard {
-  border-radius: 26px;
-  padding: 24px;
-}
-
-.projectGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.projectCard {
-  overflow: hidden;
-  border-radius: 26px;
-}
-
-.linkGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.linkCard {
-  display: block;
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  background: rgba(255, 255, 255, 0.58);
-  padding: 22px;
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    background-color 180ms ease;
-}
-
-.linkCard:hover {
-  transform: translateY(-3px);
-  border-color: rgba(19, 34, 41, 0.28);
-  background: rgba(255, 255, 255, 0.76);
-}
-
-.linkCard h2 {
-  font-family: var(--font-cormorant), serif;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
-}
-
-.projectImageWrap {
-  padding: 16px 16px 0;
-}
-
-.projectImageWrap .imageShell,
-.projectImageWrap .imagePlaceholder {
   min-height: 220px;
 }
 
-.projectContent {
-  padding: 20px 20px 22px;
-}
-
-.projectContent h3 {
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-}
-
+.hobbyContent h3,
+.projectContent h3,
 .timelineCard h3 {
-  margin: 10px 0 12px;
-  font-size: 1.45rem;
+  margin-bottom: 6px;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: lowercase;
 }
 
-.timelineBody {
-  max-width: 70ch;
-  color: var(--ink-soft);
-  line-height: 1.75;
+.sectionHeader {
+  margin-bottom: 18px;
 }
 
-.pointList {
-  display: grid;
-  gap: 10px;
-  margin-top: 18px;
-  padding-left: 20px;
-  color: var(--ink);
-}
+@media (max-width: 720px) {
+  .main {
+    width: min(100vw - 24px, 760px);
+    padding: 20px 0 44px;
+  }
 
-.pointList li {
-  line-height: 1.65;
-}
-
-.storyPanel {
-  border-radius: 26px;
-  padding: 24px;
-}
-
-.storyPanel p {
-  max-width: 72ch;
-  color: var(--ink-soft);
-  font-size: 1.05rem;
-  line-height: 1.85;
-}
-
-.storyPanel p + p {
-  margin-top: 16px;
-}
-
-.footerCard {
-  margin-top: 18px;
-  padding: 28px;
-}
-
-.footerCard p {
-  max-width: 54ch;
-  color: var(--ink-soft);
-  line-height: 1.75;
-}
-
-@media (max-width: 980px) {
   .heroGrid,
-  .sectionHeader,
-  .hobbyLead,
-  .metrics,
-  .strengthGrid,
-  .projectGrid,
-  .hobbyGrid,
-  .linkGrid {
+  .photoGallery {
     grid-template-columns: 1fr;
   }
 
   .heroCopy h1 {
     max-width: none;
-  }
-}
-
-@media (max-width: 640px) {
-  .main {
-    width: min(100vw - 20px, 1120px);
-    padding: 10px 0 40px;
-  }
-
-  .hero,
-  .section,
-  .footerCard {
-    border-radius: 24px;
-    padding: 20px;
-  }
-
-  .navRow {
-  .heroCopy h1 {
-    font-size: clamp(2.6rem, 14vw, 4rem);
-  }
-
-  .sectionHeader h2,
-  .footerCard h2 {
-    font-size: clamp(2.2rem, 12vw, 3.2rem);
-  }
-
-  .heroCard,
-  .metricCard,
-  .strengthCard,
-  .timelineCard,
-  .storyPanel,
-  .hobbyCard {
-    border-radius: 20px;
-  }
-
-  .polaroidAccent {
-    right: 10px;
-    bottom: 10px;
-    width: 116px;
-    height: 142px;
-  }
-
-  .photoGallery {
-    grid-template-columns: 1fr;
+    font-size: clamp(2.4rem, 12vw, 3.6rem);
   }
 
   .galleryShotLarge,
-  .galleryShot {
+  .galleryShot,
+  .photoFrame,
+  .imageShell {
     min-height: 220px;
+  }
+
+  .polaroidAccent {
+    right: 8px;
+    bottom: 8px;
   }
 }

@@ -4,20 +4,19 @@ import styles from "../page.module.css";
 export default function ContactPage() {
   return (
     <div className={styles.page}>
-      <div className={styles.backdrop} />
       <main className={styles.main}>
         <section className={styles.hero}>
           <SiteHeader currentPath="/contact" />
           <div className={styles.heroCopy}>
             <p className={styles.kicker}>contact</p>
-            <h1>Say hello.</h1>
+            <h1>say hello.</h1>
             <p className={styles.summary}>
-              The easiest way to reach Liam is by email. GitHub and LinkedIn
-              are below too.
+              the easiest way to reach me is by email. github and linkedin are
+              below too.
             </p>
-            <div className={styles.ctas}>
+            <div className={styles.inlineLinks}>
               <a className={styles.primary} href="mailto:liamvanpj@gmail.com">
-                Email Liam
+                email
               </a>
               <a
                 className={styles.secondary}
@@ -25,7 +24,7 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GitHub
+                github
               </a>
               <a
                 className={styles.secondary}
@@ -33,7 +32,7 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LinkedIn
+                linkedin
               </a>
             </div>
           </div>

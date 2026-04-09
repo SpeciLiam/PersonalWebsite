@@ -5,16 +5,15 @@ import styles from "../page.module.css";
 export default function WorkPage() {
   return (
     <div className={styles.page}>
-      <div className={styles.backdrop} />
       <main className={styles.main}>
         <section className={styles.hero}>
           <SiteHeader currentPath="/work" />
           <div className={styles.heroCopy}>
             <p className={styles.kicker}>work</p>
-            <h1>Recent work across cloud systems, AI, and product engineering.</h1>
+            <h1>recent work.</h1>
             <p className={styles.summary}>
-              A short selection of the systems and product work Liam has spent
-              the most time on recently.
+              a short selection of systems and product work i&apos;ve spent the
+              most time on recently.
             </p>
           </div>
         </section>

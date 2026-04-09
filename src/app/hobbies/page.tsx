@@ -6,13 +6,15 @@ import styles from "../page.module.css";
 export default function HobbiesPage() {
   return (
     <div className={styles.page}>
-      <div className={styles.backdrop} />
       <main className={styles.main}>
         <section className={styles.hero}>
           <SiteHeader currentPath="/hobbies" />
           <div className={styles.heroCopy}>
             <p className={styles.kicker}>hobbies</p>
-            <h1>Photography, college football, and a little time around a pool table.</h1>
+            <h1>photography, college football, and pool.</h1>
+            <p className={styles.summary}>
+              a few things i spend time on away from work.
+            </p>
           </div>
         </section>
 
