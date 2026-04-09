@@ -24,12 +24,18 @@ export default function HobbiesPage() {
               <article key={hobby.title} className={styles.hobbyCard}>
                 <div className={styles.hobbyMedia}>
                   {hobby.gallery ? (
-                    <div className={styles.photoGallery}>
+                    <div
+                      className={`${styles.photoGallery} ${
+                        hobby.galleryLayout === "grid" ? styles.photoGalleryGrid : ""
+                      }`}
+                    >
                       {hobby.gallery.map((shot, index) => (
                         <div
                           key={shot.src}
                           className={`${styles.galleryShot} ${
-                            index === 0 ? styles.galleryShotLarge : ""
+                            index === 0 && hobby.galleryLayout !== "grid"
+                              ? styles.galleryShotLarge
+                              : ""
                           }`}
                         >
                           <Image
@@ -37,6 +43,7 @@ export default function HobbiesPage() {
                             alt={shot.alt}
                             fill
                             className={styles.coverImage}
+                            style={{ objectPosition: shot.position ?? "center" }}
                           />
                         </div>
                       ))}
@@ -49,6 +56,7 @@ export default function HobbiesPage() {
                         alt={hobby.imageAlt ?? hobby.title}
                         fill
                         className={styles.coverImage}
+                        style={{ objectPosition: hobby.imagePosition ?? "center" }}
                       />
                     </div>
                   ) : (

@@ -94,9 +94,12 @@ export type Hobby = {
   placeholder?: string;
   imageSrc?: string;
   imageAlt?: string;
+  imagePosition?: string;
+  galleryLayout?: "feature" | "grid";
   gallery?: Array<{
     src: string;
     alt: string;
+    position?: string;
   }>;
 };
 
@@ -104,6 +107,7 @@ export const hobbies: Hobby[] = [
   {
     title: "Photography",
     tag: "Visual diary",
+    galleryLayout: "feature",
     description:
       "Photography is probably my favorite way to slow down and pay attention to light, framing, and little details.",
     gallery: [
@@ -132,24 +136,29 @@ export const hobbies: Hobby[] = [
       "College football is part sport, part routine, and part excuse to be around friends. most of that energy goes to uga.",
     imageSrc: "/images/football-photo.jpeg",
     imageAlt: "Liam with friends at a college football game",
+    imagePosition: "center 28%",
   },
   {
     title: "Playing pool",
     tag: "Off-hours reset",
+    galleryLayout: "grid",
     description:
       "Pool is a good reset for me. it&apos;s focused, competitive, and a lot more about rhythm than people think.",
     gallery: [
       {
         src: "/images/pool/pool-shot-1.jpeg",
         alt: "Liam lining up a shot at a pool hall",
+        position: "center center",
       },
       {
         src: "/images/pool/pool-shot-2.jpeg",
         alt: "Pool table set up in a bright lounge space",
+        position: "center center",
       },
       {
         src: "/images/pool/pool-shot-3.jpeg",
         alt: "Pool table in a bar with players lining up shots",
+        position: "center center",
       },
     ],
   },
