@@ -37,61 +37,6 @@
   padding: 28px;
 }
 
-.topBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  gap: 16px;
-}
-
-.markWrap {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.markDot {
-  width: 11px;
-  height: 11px;
-  border-radius: 999px;
-  background: var(--ink);
-}
-
-.markBar {
-  width: 24px;
-  height: 2px;
-  border-radius: 999px;
-  background: var(--ink);
-}
-
-.tabNav {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-.tabLink {
-  padding: 8px 12px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  color: var(--ink-soft);
-  font-size: 0.86rem;
-  text-transform: lowercase;
-  transition:
-    border-color 180ms ease,
-    background-color 180ms ease,
-    color 180ms ease;
-}
-
-.tabLink:hover {
-  border-color: var(--line);
-  background: rgba(255, 255, 255, 0.72);
-  color: var(--ink);
-}
-
 .kicker,
 .eyebrow,
 .sectionEyebrow,
@@ -462,6 +407,37 @@
   border-radius: 26px;
 }
 
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.linkCard {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.58);
+  padding: 22px;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.linkCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(19, 34, 41, 0.28);
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.linkCard h2 {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
 .projectImageWrap {
   padding: 16px 16px 0;
 }
@@ -537,7 +513,8 @@
   .metrics,
   .strengthGrid,
   .projectGrid,
-  .hobbyGrid {
+  .hobbyGrid,
+  .linkGrid {
     grid-template-columns: 1fr;
   }
 
@@ -560,17 +537,6 @@
   }
 
   .navRow {
-  .topBar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 24px;
-  }
-
-  .tabNav {
-    justify-content: flex-start;
-  }
-
   .heroCopy h1 {
     font-size: clamp(2.6rem, 14vw, 4rem);
   }

@@ -1,0 +1,73 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.markWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.markDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+.markBar {
+  width: 24px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--ink);
+}
+
+.tabNav {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.tabLink {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  text-transform: lowercase;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.tabLink:hover {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+}
+
+.active {
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .topBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .tabNav {
+    justify-content: flex-start;
+  }
+}
