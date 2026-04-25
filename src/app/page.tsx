@@ -98,7 +98,16 @@ export default function Home() {
             <p className={styles.sectionEyebrow}>projects</p>
             <div className={styles.projectGrid}>
               {projects.map((project) => (
-                <article key={project.title} className={styles.projectCard}>
+                <a
+                  key={project.title}
+                  className={styles.projectCard}
+                  href={project.url ?? "#work"}
+                  target={project.url ? "_blank" : undefined}
+                  rel={project.url ? "noopener noreferrer" : undefined}
+                  aria-label={
+                    project.url ? `Open ${project.title}` : project.title
+                  }
+                >
                   <div className={styles.imageShell}>
                     <div className={styles.imagePlaceholder}>
                       <span>{project.tag}</span>
@@ -113,7 +122,7 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                </article>
+                </a>
               ))}
             </div>
           </div>

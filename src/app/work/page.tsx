@@ -50,7 +50,13 @@ export default function WorkPage() {
           </div>
           <div className={styles.projectGrid}>
             {projects.map((project) => (
-              <article key={project.title} className={styles.projectCard}>
+              <a
+                key={project.title}
+                className={styles.projectCard}
+                href={project.url ?? "#"}
+                target={project.url ? "_blank" : undefined}
+                rel={project.url ? "noopener noreferrer" : undefined}
+              >
                 <div className={styles.projectImageWrap}>
                   <div className={styles.imageShell}>
                     <div className={styles.imageBadge}>{project.tag}</div>
@@ -73,7 +79,7 @@ export default function WorkPage() {
                     ))}
                   </div>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </section>

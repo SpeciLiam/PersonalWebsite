@@ -304,6 +304,7 @@
 }
 
 .projectCard {
+  display: block;
   overflow: hidden;
   transition:
     border-color 180ms ease,

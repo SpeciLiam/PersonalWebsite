@@ -89,6 +89,7 @@ export const projects = [
   {
     title: "Fantasy Wizard",
     tag: "Product + AI",
+    url: "https://fantasy-wizard-ten.vercel.app/",
     description:
       "A fantasy football app built with React and Spring Boot for lineup, trade, and draft decisions.",
     imageLabel: "Project screenshot placeholder",
