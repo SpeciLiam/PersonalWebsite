@@ -17,6 +17,7 @@
 .section {
   padding: 68px 0;
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 24px;
 }
 
 .homeHeroTop {
@@ -114,6 +115,15 @@
 .heroCopy h1 {
   margin: 8px 0 16px;
   font-size: 3rem;
+}
+
+.sectionTitle {
+  margin: 10px 0 32px;
+  font-family: var(--font-bodoni), Georgia, serif;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: 0;
 }
 
 .kicker,
@@ -230,7 +240,45 @@
 }
 
 .timelineCard {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
   padding: 22px;
+}
+
+.workNumber {
+  color: var(--ink-faint);
+  font-family: var(--font-bodoni), Georgia, serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.workHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.companyChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.companyChips span {
+  padding: 2px 9px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--ink-faint);
+  font-family: var(--font-syne), sans-serif;
+  font-size: 0.57rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .timelineCard h3,
@@ -265,6 +313,14 @@
 .projectCard:hover {
   border-color: var(--accent);
   transform: translateY(-3px);
+}
+
+.projectBlock {
+  margin-top: 40px;
+}
+
+.projectBlock > .sectionEyebrow {
+  margin-bottom: 16px;
 }
 
 .projectImageWrap,

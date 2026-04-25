@@ -2,11 +2,11 @@ export const withAssetBase = (path: string) => path;
 export const withBasePath = (path: string) => path;
 
 export const tabs = [
-  { label: "home", href: "/" },
-  { label: "work", href: "/work" },
-  { label: "running", href: "/running" },
-  { label: "hobbies", href: "/hobbies" },
-  { label: "contact", href: "/contact" },
+  { label: "now", href: "#now" },
+  { label: "work", href: "#work" },
+  { label: "running", href: "#running" },
+  { label: "hobbies", href: "#hobbies" },
+  { label: "contact", href: "#contact" },
 ];
 
 export const homeHighlights = [
