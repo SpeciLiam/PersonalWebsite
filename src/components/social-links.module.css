@@ -3,31 +3,50 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 14px;
-  margin-top: 18px;
+  margin-top: 22px;
 }
 
 .iconLink,
 .emailLink {
-  color: #151515;
-  transition: opacity 180ms ease;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
 }
 
 .iconLink {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-soft);
 }
 
 .emailLink {
-  font-size: 0.96rem;
+  border-bottom: 1px solid var(--ink-faint);
+  color: var(--ink-faint);
+  font-family: var(--font-syne), sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
   line-height: 1.5;
+  padding-bottom: 1px;
+  text-transform: lowercase;
 }
 
-.iconLink:hover,
+.iconLink:hover {
+  border-color: var(--ink-soft);
+  background: var(--paper-strong);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
 .emailLink:hover {
-  opacity: 0.7;
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 @media (max-width: 640px) {

@@ -4,10 +4,9 @@ import styles from "./site-header.module.css";
 export function SiteHeader({ currentPath }: { currentPath: string }) {
   return (
     <div className={styles.topBar}>
-      <div className={styles.markWrap} aria-label="Liam Van mark">
-        <span className={styles.markChevron} />
-        <span className={styles.markChevron} />
-      </div>
+      <a href={withBasePath("/")} className={styles.markWrap} aria-label="Liam Van home">
+        lv.
+      </a>
       <nav className={styles.tabNav} aria-label="Section navigation">
         {tabs.map((tab) => (
           <a

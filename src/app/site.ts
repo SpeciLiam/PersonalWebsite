@@ -1,14 +1,35 @@
-const repoBase = process.env.GITHUB_ACTIONS === "true" ? "/PersonalWebsite" : "";
-
-export const withAssetBase = (path: string) => `${repoBase}${path}`;
-export const withBasePath = (path: string) =>
-  path === "/" ? `${repoBase}/` : `${repoBase}${path}/`;
+export const withAssetBase = (path: string) => path;
+export const withBasePath = (path: string) => path;
 
 export const tabs = [
   { label: "home", href: "/" },
   { label: "work", href: "/work" },
+  { label: "running", href: "/running" },
   { label: "hobbies", href: "/hobbies" },
   { label: "contact", href: "/contact" },
+];
+
+export const homeHighlights = [
+  {
+    label: "role",
+    title: "software engineer",
+    body: "oracle · gcp integration (oasis)",
+  },
+  {
+    label: "building",
+    title: "oci databases on gcp",
+    body: "create, restore, backup, and data guard flows",
+  },
+  {
+    label: "stack",
+    title: "go · java · terraform",
+    body: "grafana, oci, gcp cloud infrastructure",
+  },
+  {
+    label: "outside work",
+    title: "running, photos, and pool",
+    body: "the stuff i spend time on when i log off",
+  },
 ];
 
 export type WorkBrand = "oracle" | "googleCloud" | "caterpillar";
@@ -19,6 +40,7 @@ export type WorkItem = {
   title: string;
   body: string;
   points: string[];
+  tech: string[];
 };
 
 export const work: WorkItem[] = [
@@ -33,6 +55,7 @@ export const work: WorkItem[] = [
       "Build AI-assisted testing and internal tools for customer-facing database workflows.",
       "Help with releases, on-call support, and production debugging with Grafana and T2 telemetry.",
     ],
+    tech: ["Go", "Java", "GCP", "OCI", "Grafana", "Terraform"],
   },
   {
     eyebrow: "Built",
@@ -45,6 +68,7 @@ export const work: WorkItem[] = [
       "Added OpenSearch-based video retrieval to Oracle University search.",
       "Shipped React and NestJS product features from design feedback through launch.",
     ],
+    tech: ["React", "NestJS", "TypeScript", "OpenSearch", "LLM", "OCI"],
   },
   {
     eyebrow: "Earlier",
@@ -57,6 +81,7 @@ export const work: WorkItem[] = [
       "Built APIs and data flows that improved analysis speed by 50%.",
       "Improved distributed caching and CI/CD across Spring Boot and Angular services.",
     ],
+    tech: ["Java", "Spring Boot", "Angular", "Parquet", "Redis", "CI/CD"],
   },
 ];
 
@@ -72,6 +97,7 @@ export const projects = [
       "Sleeper API integrations and league activity tracking",
       "AI chat assistant for lineup, trade, and draft advice",
     ],
+    tech: ["React", "Spring Boot", "Java", "Sleeper API", "AI"],
   },
   {
     title: "Oracle Learning Search",
@@ -84,6 +110,7 @@ export const projects = [
       "OpenSearch video retrieval pipeline",
       "React and NestJS implementation from design feedback",
     ],
+    tech: ["React", "NestJS", "OpenSearch", "LLM", "TypeScript"],
   },
 ];
 

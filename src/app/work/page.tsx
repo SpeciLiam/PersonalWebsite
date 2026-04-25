@@ -19,6 +19,9 @@ export default function WorkPage() {
         </section>
 
         <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <p className={styles.sectionEyebrow}>experience</p>
+          </div>
           <div className={styles.timeline}>
             {work.map((item) => (
               <article key={item.title} className={styles.timelineCard}>
@@ -31,12 +34,20 @@ export default function WorkPage() {
                     <li key={point}>{point}</li>
                   ))}
                 </ul>
+                <div className={styles.techRow}>
+                  {item.tech.map((t) => (
+                    <span key={t} className={styles.techTag}>{t}</span>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
         </section>
 
         <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <p className={styles.sectionEyebrow}>projects</p>
+          </div>
           <div className={styles.projectGrid}>
             {projects.map((project) => (
               <article key={project.title} className={styles.projectCard}>
@@ -56,6 +67,11 @@ export default function WorkPage() {
                       <li key={point}>{point}</li>
                     ))}
                   </ul>
+                  <div className={styles.techRow}>
+                    {project.tech.map((t) => (
+                      <span key={t} className={styles.techTag}>{t}</span>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
